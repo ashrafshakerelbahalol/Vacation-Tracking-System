@@ -13,7 +13,7 @@ of empowerment to the employees.
   Award Time: Describes how a manager can award a subordinate extra leave time (comp time).
   Manage Leave Categories: Describes how an HR clerk manages leave categories and their rules.
   Override Leave Records: Describes how an HR clerk may override any rejection of leave time requests made by the rules in the system.
-  making logging: allow system to save log files to use it to backup when failure happen
+  making logging: allow the system to save log files to use them to back up when failures happen
   
 ## Non-functional requirement:
  1- Availability makes the system available 24/7
@@ -55,10 +55,28 @@ of empowerment to the employees.
             
    System Admin: A role responsible for the smooth running of the system’s technical resources 
             (e.g., Web server, database) and for collecting and archiving all log files
+
+# Domain model
+Employee,
+Manager,
+Vacation Request,
+Category of Vacation
             
+# Flow Chart     
+
 # Employee
   <img width="541" height="1181" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/3b003d3f-83cd-40de-b8c9-a211ac4d3692" />
   
 # Manager
   <img width="332" height="752" alt="Manager" src="https://github.com/user-attachments/assets/780055bc-5f8b-4439-8b2e-cea6f5d144ab" />
+
+# Withdraw request
+  <img width="271" height="932" alt="Withdraw request" src="https://github.com/user-attachments/assets/d78a2674-628a-461f-bc66-a68590d6cd14" />
+
+# Cancel Request
+  <img width="320" height="1282" alt="cancel Request" src="https://github.com/user-attachments/assets/ab48345b-36bf-487d-91df-9695c6a83ad4" />
+  
+# Edit request
+  <img width="362" height="1161" alt="Edit request" src="https://github.com/user-attachments/assets/a559b63e-ed53-4e69-99b5-437cca9d7402" />
+
 
