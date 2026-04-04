@@ -61,6 +61,9 @@ Employee,
 Manager,
 Vacation Request,
 Category of Vacation
+
+<img width="321" height="241" alt="ClassUML" src="https://github.com/user-attachments/assets/b2607ae7-a2f9-4310-90f1-72685e7dc50e" />
+
             
 # Flow Chart     
 
