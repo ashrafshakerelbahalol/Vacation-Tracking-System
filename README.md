@@ -83,21 +83,37 @@ Category of Vacation
 <img width="851" height="1012" alt="Employee create request" src="https://github.com/user-attachments/assets/cbe7a7f8-86d8-4998-92fc-cacf2c74a04a" />
 
 # Pseudocode 
+
  PROCEDURE ProcessEmployeeRequest()
+ 
     Employee inputs Credentials to VTS
+    
     VTS authenticates the employee
+    
     VTS returns "View all requests dedicated to the user" to the employee
+    
     Employee sends "Create new request" command to VTS
+    
     VTS returns a new request page  to the employee
+    
     Employee fills in the required info and submits RequestData to VTS
+    
     IF RequestData is NOT VALID THEN
-        VTS returns "error msg with explanation" to the employee     
+    
+        VTS returns "error msg with explanation" to the employee    
+        
     ELSE IF RequestData is VALID THEN
+    
         VTS  save request with pending approval   
+        
         VTS sends the command "send email to" to the Email Server
+        
         The email server sends an email to the manager
+        
         Email Server returns "confirm sending email" to VTS
-        VTS returns "show request as pending approval to the employee        
+        
+        VTS returns "show request as pending approval to the employee     
+        
     END IF
 
 END PROCEDURE
