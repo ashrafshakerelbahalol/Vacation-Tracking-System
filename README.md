@@ -56,7 +56,7 @@ of empowerment to the employees.
    System Admin: A role responsible for the smooth running of the system’s technical resources 
             (e.g., Web server, database) and for collecting and archiving all log files
 
-# Domain model
+# Data model
 Employee,
 Manager,
 Vacation Request,
