@@ -78,7 +78,7 @@ Category of Vacation
 
 # Pseudocode:   Manage Time
 
- PROCEDURE ProcessEmployeeRequest()
+    PROCEDURE ProcessEmployeeRequest()
  
     Employee inputs Credentials to VTS
     
@@ -110,7 +110,7 @@ Category of Vacation
         
     END IF
 
-END PROCEDURE
+    END PROCEDURE
 
 # Task Part 2:
 
@@ -127,25 +127,80 @@ END PROCEDURE
 To ensure minimum impact when adding new statuses, we will decouple the request logic from the status logic using the State Pattern. This allows us to treat each status as a plugin. If the business decides to add an HR approval layer, we simply plug in the new 'HR_Pending' state and update the transition rule, leaving the original Employee and Manager code completely untouched
 
 ## Flow Chart
-### Withdraw request
-  <img width="271" height="932" alt="Withdraw request" src="https://github.com/user-attachments/assets/d78a2674-628a-461f-bc66-a68590d6cd14" />
 
 ### Cancel Request
-  <img width="320" height="1282" alt="cancel Request" src="https://github.com/user-attachments/assets/ab48345b-36bf-487d-91df-9695c6a83ad4" />
-  
+<img width="320" height="1282" alt="cancel Request" src="https://github.com/user-attachments/assets/695d3f16-69c1-42b9-8660-4153b5dd47b1" />
+
 ### Edit request
-<img width="829" height="769" alt="edit reques t" src="https://github.com/user-attachments/assets/8f624b6c-35d5-48ae-834e-001ec7ac466b" />
+<img width="362" height="1161" alt="Edit request" src="https://github.com/user-attachments/assets/f65373f7-e9c3-4218-980f-ab1515bdecac" />
+
   
 ## Sequence Diagrams
 ### Edit request
-![hgh](https://github.com/user-attachments/assets/20734078-1ef4-4399-ac98-578fc0c4d46d)
+<img width="651" height="737" alt="edit reques t" src="https://github.com/user-attachments/assets/0f49a0dd-8d8f-42ba-bb86-be91fd9cfa2c" />
+
 ### Cancel Request
-<img width="829" height="770" alt="cancel request sequence drawio" src="https://github.com/user-attachments/assets/bb6d2738-0bb4-4936-98a4-582024b90c3d" />
+<img width="665" height="736" alt="cancel request sequence drawio" src="https://github.com/user-attachments/assets/130c2687-039d-465f-ad63-554e855edb01" />
+
 
 ## State Diagram
 <img width="799" height="429" alt="state diagram for request" src="https://github.com/user-attachments/assets/01af1d7e-f6c6-4963-9edb-3ba6bc6985e9" />
 
+## pesudocode
 
+### Edit request
+
+    FUNCTION handleEditRequest(Employee, RequestID)
+
+    RequestDetails = VTS.getDetails(RequestID)
+    
+    DISPLAY RequestDetails to Employee
+    
+    ModifiedRequest, ActionType = Employee.editRequest(RequestDetails)
+    
+    IF ActionType == "withdraw" THEN
+        DISPLAY "Are you sure you want to withdraw this request?" TO Employee
+        
+        Confirmation = Employee.pressConfirm()
+        
+        IF Confirmation == TRUE THEN
+            VTS.updateStatus(RequestID, "Withdrawn")
+            DISPLAY "The request is withdrawn" TO Employee
+        END IF
+        
+    ELSE 
+        VTS.updateRequest(RequestID, ModifiedRequest)
+        DISPLAY "The request is edited" TO Employee
+        
+    END IF
+
+    END FUNCTION
+
+### cancel request
+
+    FUNCTION handleCancelRequest(Request)
+
+    VTS.receiveRequestToCancel(Request)
+
+    IF Request.Status == "recent past" THEN
+        DISPLAY "Please provide an explanation" 
+        Explanation = Employee.fillExplanation()
+        
+        IF Employee.pressOK() THEN
+            VTS.changeStatus(Request, "Cancelled")
+            DISPLAY confirmation TO Employee
+        END IF
+
+    ELSE IF Request.Status == "future" THEN
+        VTS.changeStatus(Request, "Cancelled")
+        DISPLAY "Request status changed to cancel in requests table" TO Employee
+
+    ELSE IF Request.Status == "past" THEN
+        DISPLAY "Error: Cannot cancel requests from the distant past" TO Employee
+
+    END IF
+
+    END FUNCTION
 
 
 
