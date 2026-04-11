@@ -1,5 +1,5 @@
 # Vacation-Tracking-System
-# vision
+## vision
 A Vacation Tracking System (VTS) will provide individual employees with the 
 capability to manage their own vacation time, sick leave, and personal time off, 
 without having to be an expert in company policy or the local facility’s leave 
@@ -24,20 +24,20 @@ of empowerment to the employees.
  
  4- Ease of Use: The system must be intuitive, intelligent, and easy to use
   
-# Constraints:
+## Constraints:
   use existing hardware,middleware
   
   Use sso
   
   Integrate with legacy hr system
 
-# Domain Problem 
+## Domain Problem 
   For many businesses today, the independence of workers has been ever 
   increasing. It is not uncommon for workers to divide their time across multiple projects and to report to multiple project managers. As a result, 
   managers have fewer informal interactions with their workers and find it 
   increasingly difficult to be aware of and manage their workers’ vacation time.
   
-# Actors:
+## Actors:
    Employee: The main user of this system. An employee uses this system to 
             manage his or her vacation time. 
             
@@ -56,7 +56,7 @@ of empowerment to the employees.
    System Admin: A role responsible for the smooth running of the system’s technical resources 
             (e.g., Web server, database) and for collecting and archiving all log files
 
-# Data model
+## Data model
 Employee,
 Manager,
 Vacation Request,
@@ -65,27 +65,27 @@ Category of Vacation
 <img width="321" height="241" alt="ClassUML" src="https://github.com/user-attachments/assets/b2607ae7-a2f9-4310-90f1-72685e7dc50e" />
 
             
-# Flow Chart     
+## Flow Chart     
 
-# Employee flow
+### Manage Time :- Employee flow 
   <img width="541" height="1181" alt="Untitled Diagram drawio" src="https://github.com/user-attachments/assets/3b003d3f-83cd-40de-b8c9-a211ac4d3692" />
   
-# Manager flow
+### Manage Time :- Manager flow
   <img width="332" height="752" alt="Manager" src="https://github.com/user-attachments/assets/780055bc-5f8b-4439-8b2e-cea6f5d144ab" />
 
-# Withdraw request
+### Withdraw request
   <img width="271" height="932" alt="Withdraw request" src="https://github.com/user-attachments/assets/d78a2674-628a-461f-bc66-a68590d6cd14" />
 
-# Cancel Request
+### Cancel Request
   <img width="320" height="1282" alt="cancel Request" src="https://github.com/user-attachments/assets/ab48345b-36bf-487d-91df-9695c6a83ad4" />
   
-# Edit request
+### Edit request
   <img width="362" height="1161" alt="Edit request" src="https://github.com/user-attachments/assets/a559b63e-ed53-4e69-99b5-437cca9d7402" />
 
-# Sequence Diagram
+# Sequence Diagram  Manage Time
 <img width="851" height="1012" alt="Employee create request" src="https://github.com/user-attachments/assets/cbe7a7f8-86d8-4998-92fc-cacf2c74a04a" />
 
-# Pseudocode 
+# Pseudocode   Manage Time
 
  PROCEDURE ProcessEmployeeRequest()
  
