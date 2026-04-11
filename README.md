@@ -134,13 +134,18 @@ To ensure minimum impact when adding new statuses, we will decouple the request 
   <img width="320" height="1282" alt="cancel Request" src="https://github.com/user-attachments/assets/ab48345b-36bf-487d-91df-9695c6a83ad4" />
   
 ### Edit request
-  <img width="362" height="1161" alt="Edit request" src="https://github.com/user-attachments/assets/a559b63e-ed53-4e69-99b5-437cca9d7402" />
+<img width="829" height="769" alt="edit reques t" src="https://github.com/user-attachments/assets/8f624b6c-35d5-48ae-834e-001ec7ac466b" />
   
 ## Sequence Diagrams
 ### Edit request
 ![hgh](https://github.com/user-attachments/assets/20734078-1ef4-4399-ac98-578fc0c4d46d)
 ### Cancel Request
 <img width="829" height="770" alt="cancel request sequence drawio" src="https://github.com/user-attachments/assets/bb6d2738-0bb4-4936-98a4-582024b90c3d" />
+
+## State Diagram
+<img width="799" height="429" alt="state diagram for request" src="https://github.com/user-attachments/assets/01af1d7e-f6c6-4963-9edb-3ba6bc6985e9" />
+
+
 
 
 
