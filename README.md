@@ -73,19 +73,10 @@ Category of Vacation
 ### Manage Time :- Manager flow
   <img width="332" height="752" alt="Manager" src="https://github.com/user-attachments/assets/780055bc-5f8b-4439-8b2e-cea6f5d144ab" />
 
-### Withdraw request
-  <img width="271" height="932" alt="Withdraw request" src="https://github.com/user-attachments/assets/d78a2674-628a-461f-bc66-a68590d6cd14" />
-
-### Cancel Request
-  <img width="320" height="1282" alt="cancel Request" src="https://github.com/user-attachments/assets/ab48345b-36bf-487d-91df-9695c6a83ad4" />
-  
-### Edit request
-  <img width="362" height="1161" alt="Edit request" src="https://github.com/user-attachments/assets/a559b63e-ed53-4e69-99b5-437cca9d7402" />
-
 # Sequence Diagram  Manage Time
 <img width="851" height="1012" alt="Employee create request" src="https://github.com/user-attachments/assets/cbe7a7f8-86d8-4998-92fc-cacf2c74a04a" />
 
-# Pseudocode   Manage Time
+# Pseudocode:   Manage Time
 
  PROCEDURE ProcessEmployeeRequest()
  
@@ -120,5 +111,37 @@ Category of Vacation
     END IF
 
 END PROCEDURE
+
+# Task Part 2:
+
+## UI
+
+### UI (Employee)
+<img width="1080" height="592" alt="Screenshot 2026-04-11 134858" src="https://github.com/user-attachments/assets/3d4004fe-f701-4da7-a434-591597029e79" />
+
+### UI (Manager)
+<img width="1154" height="630" alt="Screenshot 2026-04-11 143125" src="https://github.com/user-attachments/assets/80e11e39-ef05-4888-bfcd-0e73cb740443" />
+
+
+## Adding a layer of hr approval or pending
+To ensure minimum impact when adding new statuses, we will decouple the request logic from the status logic using the State Pattern. This allows us to treat each status as a plugin. If the business decides to add an HR approval layer, we simply plug in the new 'HR_Pending' state and update the transition rule, leaving the original Employee and Manager code completely untouched
+
+## Flow Chart
+### Withdraw request
+  <img width="271" height="932" alt="Withdraw request" src="https://github.com/user-attachments/assets/d78a2674-628a-461f-bc66-a68590d6cd14" />
+
+### Cancel Request
+  <img width="320" height="1282" alt="cancel Request" src="https://github.com/user-attachments/assets/ab48345b-36bf-487d-91df-9695c6a83ad4" />
+  
+### Edit request
+  <img width="362" height="1161" alt="Edit request" src="https://github.com/user-attachments/assets/a559b63e-ed53-4e69-99b5-437cca9d7402" />
+  
+## Sequence Diagrams
+### Edit request
+![hgh](https://github.com/user-attachments/assets/20734078-1ef4-4399-ac98-578fc0c4d46d)
+### Cancel Request
+<img width="829" height="770" alt="cancel request sequence drawio" src="https://github.com/user-attachments/assets/bb6d2738-0bb4-4936-98a4-582024b90c3d" />
+
+
 
 
