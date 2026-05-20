@@ -7,7 +7,7 @@ policies.The underlying motivations for this desire include
 the need to streamline the functions of the human resources (HR) department, to 
 minimize noncore, business-related activities of management, and to give a sense 
 of empowerment to the employees.
-##Functionial Requirement
+## Functionial Requirement
   Manage Time: vacation request can add edit view request 
   Approve Request: Describes how a manager responds to a subordinate’s request for vacation time. 
   Award Time: Describes how a manager can award a subordinate extra leave time (comp time).
